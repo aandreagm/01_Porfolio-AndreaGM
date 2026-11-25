@@ -240,7 +240,7 @@
   <!-- ================= VÍDEO ================= -->
   <section id="video" class="bg-paper h-screen flex items-center justify-center px-4">
     <div class="relative bg-ink w-full max-w-[605px] aspect-video">
-      <img src="https://placehold.co/1210x680/1b1716/efe5d6?text=Showreel" alt="Showreel 2026, próximamente" class="w-full h-full object-cover" />
+      <img src="img/showreel.svg" alt="Showreel 2026, próximamente" class="w-full h-full object-cover" />
       <button class="absolute right-3 bottom-3 bg-white rounded-lg text-[10px] px-2 py-1">Sonido</button>
     </div>
   </section>
@@ -286,7 +286,7 @@
      ========================================================= */
   const projects = [
     {
-      first: 'Clínica', last: 'Libertad', role: 'Clínica proaging en Valladolid',
+      slug: 'libertad', first: 'Clínica', last: 'Libertad', role: 'Clínica proaging en Valladolid',
       rows: [
         ['Brief', 'Una clínica proaging premium que quería moverse en redes de forma exclusiva, sin rebajar la marca a un estilo de farmacia.'],
         ['Qué hago', 'Gestionamos su presencia digital: vídeos y publicaciones con un tono cuidado y cercano, siempre con su tipografía, sus colores y su manera de hablar.'],
@@ -297,7 +297,7 @@
       imgs: 4,
     },
     {
-      first: 'Sumac', last: 'Maritime', role: 'Vino sumergido en el mar',
+      slug: 'sumac', first: 'Sumac', last: 'Maritime', role: 'Vino sumergido en el mar',
       rows: [
         ['Brief', 'Pioneros del vino sumergido en España, con bodega en Valladolid e inmersión en Portugal. Llegaban a redes desde cero, con su web y unas pocas fotos.'],
         ['Qué hago', 'Construir su presencia en Instagram, TikTok y Facebook desde el primer post y contar el viaje del vino, del fondo del mar a la copa.'],
@@ -308,7 +308,7 @@
       imgs: 4,
     },
     {
-      first: 'Andrea', last: 'GM', role: 'Mi perfil personal, @aandreagm',
+      slug: 'andrea', first: 'Andrea', last: 'GM', role: 'Mi perfil personal, @aandreagm',
       rows: [
         ['Brief', 'Mi propio escaparate: la comida como estilo de vida, mi día a día, recetas y marketing explicado para quien empieza.'],
         ['Qué hago', 'Idea, grabación y edición de todo el contenido, hablando a cámara y grabando en tanda para sostener tres reels a la semana.'],
@@ -351,7 +351,7 @@
   const projWrap = document.getElementById('proyectos');
   projects.forEach((p, i) => {
     const imgs = Array.from({ length: p.imgs }, (_, k) =>
-      `<div class="ss-layer${k === 0 ? ' show' : ''}"><img src="https://placehold.co/600x800/${['efe5d6','f0a487','e3261c','f3ebdf','d9c9b4'][k % 5]}/1b1716?text=${encodeURIComponent(p.last + ' ' + (k + 1))}" alt="Trabajo ${k + 1} de ${p.first} ${p.last}" /></div>`).join('');
+      `<div class="ss-layer${k === 0 ? ' show' : ''}"><img src="img/${p.slug}-${k + 1}.svg" alt="Pieza ${k + 1} de ${p.first} ${p.last}" loading="lazy" /></div>`).join('');
     projWrap.insertAdjacentHTML('beforeend', `
     <section class="ss-section bg-paper" id="proyecto-${i + 1}">
       <div class="ss-sticky flex flex-col md:flex-row gap-4 px-4 pt-[79px] md:pt-4 pb-4">
