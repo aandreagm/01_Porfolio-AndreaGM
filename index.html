@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andrea González — porfolio 2026</title>
-  <meta name="description" content="Porfolio de Andrea González: creación de contenido para redes sociales de marcas y empresas." />
+  <title>Andrea González — contenido para marcas</title>
+  <meta name="description" content="Porfolio de Andrea González, diseñadora gráfica y creadora de contenido para Instagram, TikTok y Facebook en Valladolid." />
 
   <!-- Tipografía: sustituta libre de "Cards Compact" (la fuente original es de pago) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,6 +59,8 @@
     .site-header { transition: color .3s ease; color: var(--color-beige); }
     .site-header:not(.is-dark) .acc { color: var(--color-beige); opacity: .7; }
     .site-header.is-dark { color: var(--color-dark); }
+    .site-header:not(.is-dark) .btn-wobble { background: var(--color-beige); color: var(--color-accent); }
+    .hero .acc { color: var(--color-beige); }
 
     /* ---------- Botón con forma "blandita" ---------- */
     .btn-wobble { border-radius: 14px; transition: transform .25s cubic-bezier(.3,1.6,.5,1), border-radius .25s ease; }
@@ -127,7 +129,7 @@
       <span>Andrea González</span>
       <span class="hidden md:inline"><span class="acc">&lt;</span>contenido<span class="acc">&gt;</span> 2026</span>
     </a>
-    <a href="#contacto" class="btn-wobble bg-accent text-ink text-m font-bold px-6 py-[15px]">Hablemos</a>
+    <a href="https://www.instagram.com/aandreagm/" target="_blank" rel="noopener" class="btn-wobble bg-accent text-beige text-m font-bold px-6 py-[15px]">Escríbeme</a>
   </header>
 
   <!-- ================= HERO ================= -->
@@ -138,11 +140,11 @@
       <div class="flex flex-col justify-between pb-6">
         <div class="mt-auto mb-auto text-[21px] font-bold leading-[1.2]">
           <p>Contenido que se mueve.</p>
-          <p>Instagram · TikTok · Facebook</p>
+          <p>Instagram, TikTok y Facebook</p>
         </div>
         <div class="text-[21px] font-bold leading-[1.2]">
+          <p>Diseñadora gráfica</p>
           <p>Valladolid</p>
-          <p>Disponible para nuevas marcas</p>
         </div>
       </div>
       <div class="hidden md:flex items-end justify-end pb-6">
@@ -158,7 +160,7 @@
         <span class="acc text-[28px] font-bold">^</span>
       </div>
       <p id="manifesto" class="text-[34px] md:text-[42px] font-bold leading-[1.1] tracking-[-.01em]">
-        En las redes no solo se publica, se hace &lt; ruido &gt; . Este porfolio nace de las ganas de enseñar lo que hay detrás de cada vídeo: marcas con voz propia, ideas que se graban, se editan y se lanzan para que la gente se pare, mire y vuelva. Creo que el contenido es el motor que pone a una marca en movimiento.
+        En las redes no solo se publica, se hace &lt; ruido &gt; . Soy Andrea, diseñadora gráfica y creadora de contenido. Ayudo a marcas a encontrar su voz en Instagram, TikTok y Facebook: pienso la idea, la grabo y la edito a mano, con la tipografía, los colores y el ritmo de cada marca, para que la gente se pare, mire y vuelva.
       </p>
     </div>
   </section>
@@ -188,8 +190,8 @@
       <span style="width:800px;height:240px;left:20%;bottom:-120px"></span>
     </div>
     <div class="relative text-center mb-12">
-      <h2 class="text-t font-bold">Mi contenido empieza aquí.<br />Pinta tu foto y compártela</h2>
-      <p class="text-m mt-4">Sube una imagen, pásala a puntos y descárgala lista para publicar.</p>
+      <h2 class="text-t font-bold">Tu foto, a mi manera.<br />Pásala a puntos y compártela</h2>
+      <p class="text-m mt-4">Sube una imagen, ajústala y descárgala lista para publicar. Si la subes, etiqueta a @aandreagm.</p>
     </div>
 
     <div class="relative grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-10 items-center max-w-[1393px] mx-auto">
@@ -222,7 +224,7 @@
       <div class="relative bg-white rounded-2xl w-full max-w-[459px] aspect-[459/573] mx-auto lg:mx-0 lg:ml-[127px] overflow-hidden">
         <div class="absolute top-3 left-3 right-3 flex gap-12 text-m font-bold leading-none z-10">
           <span>Andrea González<br /><span class="acc">&lt;</span>contenido<span class="acc">&gt;</span> 2026</span>
-          <span>Contenido que se mueve</span>
+          <span>Contenido que se mueve.</span>
         </div>
         <canvas id="hf-canvas" class="absolute inset-0 w-full h-full"></canvas>
         <label id="hf-drop" class="hf-drop absolute left-6 right-6 top-1/2 -translate-y-1/2 bg-white rounded-lg py-4 text-center cursor-pointer">
@@ -238,7 +240,7 @@
   <!-- ================= VÍDEO ================= -->
   <section id="video" class="bg-paper h-screen flex items-center justify-center px-4">
     <div class="relative bg-ink w-full max-w-[605px] aspect-video">
-      <img src="https://placehold.co/1210x680/1b1716/efe5d6?text=Showreel" alt="Showreel (próximamente)" class="w-full h-full object-cover" />
+      <img src="https://placehold.co/1210x680/1b1716/efe5d6?text=Showreel" alt="Showreel 2026, próximamente" class="w-full h-full object-cover" />
       <button class="absolute right-3 bottom-3 bg-white rounded-lg text-[10px] px-2 py-1">Sonido</button>
     </div>
   </section>
@@ -254,15 +256,15 @@
     <div class="absolute -top-24 inset-x-0 h-[420px] bg-paper/70 blur-3xl rounded-[50%]"></div>
 
     <div class="relative pt-32 px-4 grid grid-cols-1 md:grid-cols-[372px_1fr] gap-4">
-      <div><span class="inline-flex bg-white text-ink rounded-lg text-m px-2 py-2">Contacto</span></div>
+      <div><span class="inline-flex bg-paper text-ink rounded-lg text-m px-2 py-2">Contacto</span></div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[917px]">
-        <div class="bg-white text-ink rounded-lg p-2 h-[78px] flex flex-col justify-between">
-          <p class="text-s uppercase">¿Tienes una marca que mover?</p>
-          <a href="mailto:hola@tucorreo.com" class="text-m font-bold">hola@tucorreo.com</a>
-        </div>
-        <div class="bg-white text-ink rounded-lg p-2 h-[78px] flex flex-col justify-between">
-          <p class="text-s uppercase">Instagram</p>
-          <a href="#" class="text-m font-bold">@tuusuario</a>
+        <a href="https://www.instagram.com/aandreagm/" target="_blank" rel="noopener" class="bg-paper text-ink rounded-lg p-2 h-[78px] flex flex-col justify-between hover:bg-beige">
+          <p class="text-s">¿Tienes una marca que mover? Escríbeme por Instagram</p>
+          <span class="text-m font-bold">@aandreagm</span>
+        </a>
+        <div class="bg-paper text-ink rounded-lg p-2 h-[78px] flex flex-col justify-between">
+          <p class="text-s">Dónde estoy</p>
+          <span class="text-m font-bold">Valladolid, y donde haga falta grabar</span>
         </div>
       </div>
     </div>
@@ -271,7 +273,7 @@
 
     <div class="absolute inset-x-0 bottom-0 px-4 py-4 grid grid-cols-1 md:grid-cols-[355px_1fr_auto] items-end text-l font-bold">
       <div><p>Contenido que se mueve.</p><p>Andrea González</p></div>
-      <div class="hidden md:block"><p>Instagram · TikTok · Facebook</p><p>Valladolid</p></div>
+      <div class="hidden md:block"><p>Instagram, TikTok y Facebook</p><p>Valladolid</p></div>
       <span class="text-[22px] tracking-tight">AG<span class="acc">.</span></span>
     </div>
   </footer>
@@ -284,63 +286,65 @@
      ========================================================= */
   const projects = [
     {
-      first: 'Proyecto', last: 'Uno', role: 'Marca de moda',
+      first: 'Clínica', last: 'Libertad', role: 'Clínica proaging en Valladolid',
       rows: [
-        ['Brief', 'Texto de ejemplo: qué necesitaba la marca, a quién quería llegar y qué problema había que resolver con su contenido en redes.'],
-        ['Qué hice', 'Texto de ejemplo: idea, guion, grabación y edición de vídeos verticales, con la tipografía, los colores y el ritmo propios de la marca.'],
+        ['Brief', 'Una clínica proaging premium que quería moverse en redes de forma exclusiva, sin rebajar la marca a un estilo de farmacia.'],
+        ['Qué hago', 'Gestionamos su presencia digital: vídeos y publicaciones con un tono cuidado y cercano, siempre con su tipografía, sus colores y su manera de hablar.'],
       ],
-      twoCol: [['Plataformas', 'Instagram TikTok'], ['Resultados', 'Dato de ejemplo 1 Dato de ejemplo 2']],
-      sound: 'Pista de ejemplo',
-      cards: [['Formato', 'Reels y TikTok'], ['Plataforma', 'Instagram'], ['Año', '2026']],
-      imgs: 5,
-    },
-    {
-      first: 'Proyecto', last: 'Dos', role: 'Clínica',
-      rows: [
-        ['Brief', 'Texto de ejemplo: presentar los servicios de forma cercana y cuidada, sin perder un tono premium.'],
-        ['Qué hice', 'Texto de ejemplo: calendario de publicaciones, piezas en vídeo y carruseles con su identidad visual.'],
-      ],
-      twoCol: [['Plataformas', 'Instagram Facebook'], ['Resultados', 'Dato de ejemplo 1 Dato de ejemplo 2']],
-      sound: 'Pista de ejemplo',
-      cards: [['Formato', 'Vídeo y carrusel'], ['Plataforma', 'Instagram'], ['Año', '2026']],
+      twoCol: [['Redes', 'Instagram, TikTok y Facebook'], ['Tono', 'Premium, cercano y nada de farmacia']],
+      sound: 'Ritmo pausado y elegante',
+      cards: [['Sector', 'Salud y estética'], ['Ciudad', 'Valladolid'], ['Edición', 'CapCut Pro']],
       imgs: 4,
     },
     {
-      first: 'Proyecto', last: 'Tres', role: 'Restauración',
+      first: 'Sumac', last: 'Maritime', role: 'Vino sumergido en el mar',
       rows: [
-        ['Brief', 'Texto de ejemplo: dar a conocer la carta y llenar sala entre semana.'],
-        ['Qué hice', 'Texto de ejemplo: vídeos de producto, tendencias adaptadas a la marca y subtítulos animados.'],
+        ['Brief', 'Pioneros del vino sumergido en España, con bodega en Valladolid e inmersión en Portugal. Llegaban a redes desde cero, con su web y unas pocas fotos.'],
+        ['Qué hago', 'Construir su presencia en Instagram, TikTok y Facebook desde el primer post y contar el viaje del vino, del fondo del mar a la copa.'],
       ],
-      twoCol: [['Plataformas', 'TikTok Instagram'], ['Resultados', 'Dato de ejemplo 1 Dato de ejemplo 2']],
-      sound: 'Pista de ejemplo',
-      cards: [['Formato', 'TikTok'], ['Plataforma', 'TikTok'], ['Año', '2025']],
+      twoCol: [['Redes', 'Instagram, TikTok y Facebook'], ['Punto de partida', 'Cero seguidores y mucha historia que contar']],
+      sound: 'Olas y una copa que suena',
+      cards: [['Sector', 'Vino'], ['Bodega', 'Valladolid'], ['Desde', 'Noviembre 2026']],
+      imgs: 4,
+    },
+    {
+      first: 'Andrea', last: 'GM', role: 'Mi perfil personal, @aandreagm',
+      rows: [
+        ['Brief', 'Mi propio escaparate: la comida como estilo de vida, mi día a día, recetas y marketing explicado para quien empieza.'],
+        ['Qué hago', 'Idea, grabación y edición de todo el contenido, hablando a cámara y grabando en tanda para sostener tres reels a la semana.'],
+      ],
+      twoCol: [['Pilares', 'Comida, lifestyle, recetas y marketing'], ['Para quién', 'Mujeres con estilo que comen bien y emprenden']],
+      sound: 'El chisporroteo de la sartén',
+      cards: [['Formato', 'Reels'], ['Ritmo', '3 por semana'], ['Comunidad', '+8 mil']],
       imgs: 5,
     },
   ];
 
   const timeline = [
     {
-      title: ['Año', '2026', 'Ahora'],
-      place: ['Freelance y estudio', 'Creación de contenido para marcas y empresas'],
+      title: ['Hoy', '2026', 'en redes'],
+      place: ['AGM Agencia', 'Mi agencia de marketing, @agm.agencia'],
       events: [
-        ['2026', 'Hoy', 'Contenido para marcas', 'Idea, grabación y edición de vídeos para Instagram, TikTok y Facebook.'],
-        ['2026', 'ESI', 'Vibe Coding', 'Este porfolio, hecho con IA en la asignatura de Vibe Coding.'],
+        ['2026', 'Agencia', 'AGM Agencia', 'Gestionamos la presencia digital de marcas y empresas en Instagram, TikTok y Facebook.'],
+        ['2026', 'Cliente', 'Clínica Libertad', 'Contenido para una clínica proaging premium de Valladolid.'],
+        ['2026', 'Nuevo', 'Sumac Maritime', 'Desde noviembre, redes desde cero para un vino sumergido en el mar.'],
+        ['2026', 'Perfil', '@aandreagm', 'Mi cuenta personal de comida, lifestyle y marketing.'],
       ],
     },
     {
-      title: ['Año', '2025', 'Antes'],
-      place: ['ESI. Escuela Superior de Diseño', 'Valladolid'],
+      title: ['Aprendiendo', 'ESI', 'Valladolid'],
+      place: ['ESI. Escuela Superior de Diseño', 'Estudios de Diseño Gráfico'],
       events: [
-        ['2025', 'ESI', 'Diseño Gráfico', 'Estudios superiores de Diseño Gráfico.'],
-        ['2025', 'Hito', 'Hito de ejemplo', 'Descripción breve de otro momento importante.'],
+        ['ESI', 'Grado', 'Diseño Gráfico', 'Llegué al diseño gráfico después de probar otras carreras, y aquí me quedé.'],
+        ['ESI', 'Código', 'Vibe Coding', 'Este porfolio, hecho con IA en la asignatura de Vibe Coding.'],
       ],
     },
   ];
 
   const brands = [
-    ['Marcas', 3],
-    ['Colaboraciones', 2],
-    ['Herramientas', 2],
+    ['Marcas', ['Clínica Libertad', 'Sumac Maritime', 'AGM Agencia']],
+    ['Herramientas', ['CapCut Pro', 'Antigravity']],
+    ['Formación', ['ESI Valladolid']],
   ];
 
   /* ===================== PROYECTOS ===================== */
@@ -466,11 +470,11 @@
     </div>`).join('');
 
   /* ===================== MARCAS ===================== */
-  document.getElementById('brands').innerHTML = brands.map(([tag, n], i) => `
+  document.getElementById('brands').innerHTML = brands.map(([tag, names], i) => `
     <div class="grid grid-cols-1 md:grid-cols-[356px_1fr] gap-4">
       <div><span class="inline-flex bg-grey rounded-lg text-m px-2 py-2">${tag}</span></div>
       <div class="flex flex-wrap gap-4">
-        ${Array.from({ length: n }, (_, k) => `<div class="bg-grey rounded-lg ${i === 0 ? 'w-[221px] h-[141px]' : 'w-[173px] h-[110px]'} flex items-center justify-center"><img src="https://placehold.co/221x135/f3ebdf/1b1716?text=Logo+${k + 1}" alt="Logo ${k + 1}" class="max-w-full max-h-full" /></div>`).join('')}
+        ${names.map(n => `<div class="bg-grey rounded-lg ${i === 0 ? 'w-[221px] h-[141px] text-xl' : 'w-[173px] h-[110px] text-l'} flex items-center justify-center text-center font-bold px-3">${n}</div>`).join('')}
       </div>
     </div>`).join('');
 
