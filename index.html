@@ -17,9 +17,11 @@
       theme: {
         extend: {
           colors: {
-            accent: '#6bec18',
-            ink: '#121111',
-            grey: '#f3f3f3',
+            accent: '#e3261c',
+            ink: '#1b1716',
+            grey: '#f3ebdf',
+            beige: '#efe5d6',
+            paper: '#fbf7f1',
           },
           fontFamily: {
             base: ['"Inter Tight"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
@@ -39,36 +41,39 @@
   </script>
 
   <style>
-    /* ---------- Tokens (mismos valores que la referencia) ---------- */
+    /* ---------- Tokens: identidad de Andrea (rojo y beige) ---------- */
     :root {
-      --color-accent: #6bec18;
-      --color-dark: #121111;
-      --color-grey: #f3f3f3;
+      --color-accent: #e3261c;
+      --color-beige: #efe5d6;
+      --color-dark: #1b1716;
+      --color-grey: #f3ebdf;
       --frame-pad: 16px;
       --label-w: 103px;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, sans-serif; color: var(--color-dark); background: #fff; }
+    body { font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, sans-serif; color: var(--color-dark); background: #fbf7f1; }
     .acc { color: var(--color-accent); }
+    ::selection { background: var(--color-accent); color: var(--color-beige); }
 
-    /* ---------- Header: cambia de blanco a negro al salir del hero ---------- */
-    .site-header { transition: color .3s ease; }
+    /* ---------- Header: beige sobre rojo, negro al salir del hero ---------- */
+    .site-header { transition: color .3s ease; color: var(--color-beige); }
+    .site-header:not(.is-dark) .acc { color: var(--color-beige); opacity: .7; }
     .site-header.is-dark { color: var(--color-dark); }
 
     /* ---------- Botón con forma "blandita" ---------- */
     .btn-wobble { border-radius: 14px; transition: transform .25s cubic-bezier(.3,1.6,.5,1), border-radius .25s ease; }
     .btn-wobble:hover { transform: scale(1.05) rotate(-1deg); border-radius: 22px 12px 20px 14px; }
 
-    /* ---------- Hero: degradado vivo rosa/azul ---------- */
-    .hero-bg { background: #aec0d8; overflow: hidden; }
-    .blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .55; animation: drift 18s ease-in-out infinite alternate; }
-    .blob.b1 { width: 520px; height: 520px; background: #e3b3b9; left: -120px; top: 40px; }
-    .blob.b2 { width: 600px; height: 600px; background: #d8b8c6; left: 35%; top: 30%; animation-duration: 22s; }
-    .blob.b3 { width: 520px; height: 520px; background: #e8b7b4; right: -140px; bottom: -160px; animation-duration: 26s; }
+    /* ---------- Hero: degradado vivo en rojos ---------- */
+    .hero-bg { background: #d8241a; color: var(--color-beige); overflow: hidden; }
+    .blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .6; animation: drift 18s ease-in-out infinite alternate; }
+    .blob.b1 { width: 520px; height: 520px; background: #f0846a; left: -120px; top: 40px; }
+    .blob.b2 { width: 600px; height: 600px; background: #a9140c; left: 35%; top: 30%; animation-duration: 22s; }
+    .blob.b3 { width: 520px; height: 520px; background: #f3c4ad; right: -140px; bottom: -160px; animation-duration: 26s; }
     @keyframes drift { to { transform: translate(80px, -60px) scale(1.15); } }
 
     /* ---------- Manifiesto: texto que se revela con el scroll ---------- */
-    .reveal-word { color: #e8e8e8; transition: color .2s linear; }
+    .reveal-word { color: #eadfd0; transition: color .2s linear; }
     .reveal-word.on { color: var(--color-dark); }
 
     /* ---------- Bandada (boids) ---------- */
@@ -85,11 +90,11 @@
     .ss-label { width: var(--label-w); flex: none; }
 
     /* ---------- Trayectoria ---------- */
-    .sc-event + .sc-event { border-top: 1px solid #bdbdbd; }
-    .sc-event { border-bottom: 1px solid #bdbdbd; }
+    .sc-event + .sc-event { border-top: 1px solid #d9c9b4; }
+    .sc-event { border-bottom: 1px solid #d9c9b4; }
 
     /* ---------- Generador halftone ---------- */
-    .hf-section { background: linear-gradient(180deg, #c6d2e0 0%, #b3c3d6 55%, #e8edf3 100%); }
+    .hf-section { background: linear-gradient(180deg, #e9d9c3 0%, #efe5d6 55%, #f7f1e8 100%); }
     .hf-clouds { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
     .hf-clouds span { position: absolute; border-radius: 50%; background: #fff; filter: blur(40px); opacity: .55; }
     input[type=range].hf-range { -webkit-appearance: none; appearance: none; width: 100%; height: 2px; background: rgba(255,255,255,.7); outline: none; }
@@ -98,8 +103,8 @@
     .hf-drop { border: 1.5px dashed #121111; }
 
     /* ---------- Footer ---------- */
-    .fg-bg { background: linear-gradient(180deg, #9aa0a8 0%, #c98d63 30%, #e48a3c 52%, #c9643a 66%, #3a2b25 82%, #1d1a18 100%); }
-    .fg-word { font-size: clamp(90px, 21vw, 320px); line-height: .9; letter-spacing: -.02em; color: rgba(255,255,255,.28); backdrop-filter: blur(2px); }
+    .fg-bg { background: linear-gradient(180deg, #efe5d6 0%, #f0a487 24%, #e3261c 50%, #9e150e 72%, #2a1512 90%, #1b1716 100%); }
+    .fg-word { font-size: clamp(90px, 21vw, 320px); line-height: .9; letter-spacing: -.02em; color: rgba(239,229,214,.3); backdrop-filter: blur(2px); }
 
     /* ---------- Cursor personalizado ---------- */
     #cursor { position: fixed; width: 14px; height: 14px; border-radius: 50%; background: var(--color-accent); pointer-events: none; z-index: 100; transform: translate(-50%, -50%); mix-blend-mode: multiply; transition: width .15s, height .15s; }
@@ -117,7 +122,7 @@
 <body class="antialiased">
 
   <!-- ================= HEADER ================= -->
-  <header class="site-header fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 h-[79px] text-white">
+  <header class="site-header fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 h-[79px]">
     <a href="#" class="flex items-center gap-[19vw] text-[16px] font-bold">
       <span>Andrea González</span>
       <span class="hidden md:inline"><span class="acc">&lt;</span>contenido<span class="acc">&gt;</span> 2026</span>
@@ -126,7 +131,7 @@
   </header>
 
   <!-- ================= HERO ================= -->
-  <section class="hero hero-bg relative h-screen text-white">
+  <section class="hero hero-bg relative h-screen">
     <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
     <div class="relative z-10 h-full px-6 pt-16 grid grid-cols-1 md:grid-cols-[26%_52%_1fr]">
       <div class="hidden md:block"></div>
@@ -147,7 +152,7 @@
   </section>
 
   <!-- ================= MANIFIESTO ================= -->
-  <section class="relative bg-white py-40 px-6">
+  <section class="relative bg-paper py-40 px-6">
     <div class="grid grid-cols-1 md:grid-cols-[26%_52%_1fr]">
       <div class="hidden md:flex justify-end pr-12 pt-3">
         <span class="acc text-[28px] font-bold">^</span>
@@ -166,7 +171,7 @@
   </div>
 
   <!-- ================= TRAYECTORIA ================= -->
-  <section id="trayectoria" class="bg-white py-24 px-4">
+  <section id="trayectoria" class="bg-paper py-24 px-4">
     <div class="grid grid-cols-1 md:grid-cols-[26%_1fr]">
       <aside class="mb-6 md:mb-0 pt-10">
         <span class="inline-flex bg-grey rounded-lg text-m px-2 py-2">Trayectoria</span>
@@ -195,15 +200,15 @@
           <div class="flex items-center justify-between">
             <span class="text-m">Color de fondo</span>
             <label class="flex items-center gap-2 bg-white/40 rounded px-1 py-1 w-[114px]">
-              <input id="hf-bg" type="color" value="#ffffff" class="w-7 h-7 rounded border-0 bg-transparent" />
-              <span class="text-m" id="hf-bg-hex">#FFFFFF</span>
+              <input id="hf-bg" type="color" value="#fbf7f1" class="w-7 h-7 rounded border-0 bg-transparent" />
+              <span class="text-m" id="hf-bg-hex">#FBF7F1</span>
             </label>
           </div>
           <div class="flex items-center justify-between">
             <span class="text-m">Color de figura</span>
             <label class="flex items-center gap-2 bg-white/40 rounded px-1 py-1 w-[114px]">
-              <input id="hf-fg" type="color" value="#6bec18" class="w-7 h-7 rounded border-0 bg-transparent" />
-              <span class="text-m" id="hf-fg-hex">#6BEC18</span>
+              <input id="hf-fg" type="color" value="#e3261c" class="w-7 h-7 rounded border-0 bg-transparent" />
+              <span class="text-m" id="hf-fg-hex">#E3261C</span>
             </label>
           </div>
           <div class="flex items-center justify-between">
@@ -211,7 +216,7 @@
             <button id="hf-change" class="bg-white/40 rounded text-m px-3 py-1">Cambiar</button>
           </div>
         </div>
-        <button id="hf-download" class="btn-wobble bg-ink/40 text-white text-m font-bold py-4 disabled:opacity-60" disabled>Descargar</button>
+        <button id="hf-download" class="btn-wobble bg-accent text-beige text-m font-bold py-4 disabled:opacity-60" disabled>Descargar</button>
       </aside>
 
       <div class="relative bg-white rounded-2xl w-full max-w-[459px] aspect-[459/573] mx-auto lg:mx-0 lg:ml-[127px] overflow-hidden">
@@ -231,22 +236,22 @@
   </section>
 
   <!-- ================= VÍDEO ================= -->
-  <section id="video" class="bg-white h-screen flex items-center justify-center px-4">
+  <section id="video" class="bg-paper h-screen flex items-center justify-center px-4">
     <div class="relative bg-ink w-full max-w-[605px] aspect-video">
-      <img src="https://placehold.co/1210x680/121111/ffffff?text=Showreel" alt="Showreel (próximamente)" class="w-full h-full object-cover" />
+      <img src="https://placehold.co/1210x680/1b1716/efe5d6?text=Showreel" alt="Showreel (próximamente)" class="w-full h-full object-cover" />
       <button class="absolute right-3 bottom-3 bg-white rounded-lg text-[10px] px-2 py-1">Sonido</button>
     </div>
   </section>
 
   <!-- ================= MARCAS ================= -->
-  <section id="marcas" class="bg-white py-24 px-4">
+  <section id="marcas" class="bg-paper py-24 px-4">
     <div class="flex flex-col gap-24" id="brands"></div>
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer id="contacto" class="relative h-screen overflow-hidden text-white">
+  <footer id="contacto" class="relative h-screen overflow-hidden text-beige">
     <div class="fg-bg absolute inset-0"></div>
-    <div class="absolute -top-24 inset-x-0 h-[420px] bg-white/60 blur-3xl rounded-[50%]"></div>
+    <div class="absolute -top-24 inset-x-0 h-[420px] bg-paper/70 blur-3xl rounded-[50%]"></div>
 
     <div class="relative pt-32 px-4 grid grid-cols-1 md:grid-cols-[372px_1fr] gap-4">
       <div><span class="inline-flex bg-white text-ink rounded-lg text-m px-2 py-2">Contacto</span></div>
@@ -342,9 +347,9 @@
   const projWrap = document.getElementById('proyectos');
   projects.forEach((p, i) => {
     const imgs = Array.from({ length: p.imgs }, (_, k) =>
-      `<div class="ss-layer${k === 0 ? ' show' : ''}"><img src="https://placehold.co/600x800/${['e9e9e9','f3d7d7','dfe7f2','e5f5d8','efe5d9'][k % 5]}/121111?text=${encodeURIComponent(p.last + ' ' + (k + 1))}" alt="Trabajo ${k + 1} de ${p.first} ${p.last}" /></div>`).join('');
+      `<div class="ss-layer${k === 0 ? ' show' : ''}"><img src="https://placehold.co/600x800/${['efe5d6','f0a487','e3261c','f3ebdf','d9c9b4'][k % 5]}/1b1716?text=${encodeURIComponent(p.last + ' ' + (k + 1))}" alt="Trabajo ${k + 1} de ${p.first} ${p.last}" /></div>`).join('');
     projWrap.insertAdjacentHTML('beforeend', `
-    <section class="ss-section bg-white" id="proyecto-${i + 1}">
+    <section class="ss-section bg-paper" id="proyecto-${i + 1}">
       <div class="ss-sticky flex flex-col md:flex-row gap-4 px-4 pt-[79px] md:pt-4 pb-4">
         <div class="relative md:w-1/2 h-[45vh] md:h-full">
           <canvas class="ht-canvas absolute inset-0 w-full h-full" data-seed="${i}"></canvas>
@@ -410,7 +415,7 @@
     const ctx = cv.getContext('2d'); ctx.scale(dpr, dpr);
     const seed = +cv.dataset.seed;
     const step = 7, cx = w / 2, cy = h / 2;
-    ctx.fillStyle = '#6bec18';
+    ctx.fillStyle = '#e3261c';
     for (let y = 0; y < h; y += step) for (let x = 0; x < w; x += step) {
       const dx = (x - cx) / (w * .32), dy = (y - cy) / (h * .42);
       const a = Math.atan2(dy, dx);
@@ -465,7 +470,7 @@
     <div class="grid grid-cols-1 md:grid-cols-[356px_1fr] gap-4">
       <div><span class="inline-flex bg-grey rounded-lg text-m px-2 py-2">${tag}</span></div>
       <div class="flex flex-wrap gap-4">
-        ${Array.from({ length: n }, (_, k) => `<div class="bg-grey rounded-lg ${i === 0 ? 'w-[221px] h-[141px]' : 'w-[173px] h-[110px]'} flex items-center justify-center"><img src="https://placehold.co/221x135/f3f3f3/121111?text=Logo+${k + 1}" alt="Logo ${k + 1}" class="max-w-full max-h-full" /></div>`).join('')}
+        ${Array.from({ length: n }, (_, k) => `<div class="bg-grey rounded-lg ${i === 0 ? 'w-[221px] h-[141px]' : 'w-[173px] h-[110px]'} flex items-center justify-center"><img src="https://placehold.co/221x135/f3ebdf/1b1716?text=Logo+${k + 1}" alt="Logo ${k + 1}" class="max-w-full max-h-full" /></div>`).join('')}
       </div>
     </div>`).join('');
 
@@ -517,7 +522,7 @@
         b.x += b.vx; b.y += b.vy;
         const a = Math.atan2(b.vy, b.vx);
         bx.save(); bx.translate(b.x, b.y); bx.rotate(a);
-        bx.fillStyle = '#6bec18'; bx.fillRect(-3, -1.2, 6, 2.4); bx.restore();
+        bx.fillStyle = '#e3261c'; bx.fillRect(-3, -1.2, 6, 2.4); bx.restore();
       }
     }
     requestAnimationFrame(stepBoids);
